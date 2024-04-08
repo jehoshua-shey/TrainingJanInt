@@ -1,0 +1,378 @@
+/* External styling for the size of the text */
+
+@font-face {
+    font-family: mulish-extra-light;
+    src: url("./font/Mulish-ExtraLight.ttf");
+}
+
+@font-face {
+    font-family: mulish-extra-light-italic;
+    src: url("./font/Mulish-ExtraLightItalic.ttf");
+}
+
+@font-face {
+    font-family: mulish-light;
+    src: url("./font/Mulish-Light.ttf");
+}
+
+@font-face {
+    font-family: mulish-light-italic;
+    src: url("./font/Mulish-LightItalic.ttf");
+}
+
+@font-face {
+    font-family: mulish-regular;
+    src: url("./font/Mulish-Regular.ttf");
+}
+
+@font-face {
+    font-family: mulish-italic;
+    src: url("./font/Mulish-Italic.ttf");
+}
+
+@font-face {
+    font-family: mulish-medium;
+    src: url("./font/Mulish-Medium.ttf");
+}
+
+@font-face {
+    font-family: mulish-medium-italic;
+    src: url("./font/Mulish-MediumItalic.ttf");
+}
+
+@font-face {
+    font-family: mulish-semi-bold;
+    src: url("./font/Mulish-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: mulish-semi-bold-italic;
+    src: url("./font/Mulish-SemiBoldItalic.ttf");
+}
+
+@font-face {
+    font-family: mulish-bold;
+    src: url("./font/Mulish-Bold.ttf");
+}
+
+@font-face {
+    font-family: mulish-bold-italic;
+    src: url("./font/Mulish-BoldItalic.ttf");
+}
+
+@font-face {
+    font-family: mulish-extra-bold;
+    src: url("./font/Mulish-ExtraBold.ttf");
+}
+
+@font-face {
+    font-family: mulish-extra-bold-italic;
+    src: url("./font/Mulish-ExtraBoldItalic.ttf");
+}
+
+:root {
+    --primary: #180025;
+    --secondary: #00c55f;
+    /* #ff9901 - orange*/
+    --tertiary: #1f0030;
+}
+
+body {
+    font-size: 25px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: mulish-extra-light;
+    background-color: #1d1d;
+    color: #fff;
+    text-decoration: none !important;
+}
+
+a {
+    text-decoration: none;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.homepage-body {
+    opacity: 1;
+}
+
+#homepage-main {
+    width: 85%;
+    margin: 0 auto;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    padding: 1.5rem 2rem;
+}
+
+.logo {
+    font-family: mulish-medium;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    color: #fff;
+}
+
+.logo span {
+    color: var(--secondary);
+}
+
+/* Changes made from ul to class - .menu-list was formerly ul*/
+
+.menu-list {
+    font-family: mulish-semi-bold;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-item {
+    font-size: 14px;
+    padding: 0.6rem 1.2rem;
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Psuedo classes */
+
+.menu-item:first-child {
+    padding-left: 0;
+}
+
+.menu-item:last-child {
+    margin-left: 1rem;
+    background-color: var(--tertiary);
+    padding: 0.6rem 1.8rem;
+    color: var(--secondary);
+    border-radius: 10px;
+    font-family: mulish-semi-bold;
+}
+
+.g10-dropdown {
+    display: grid;
+    grid-template-rows: 0fr;
+    position: absolute;
+    top: 100%;
+    background-color: #fff;
+    color: #180025;
+    transition: grid-template-rows 0.3s ease;
+    font-size: 14px;
+    width: max-content;
+    transform: translateX(-25%);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.dropdown-con {
+    overflow: hidden;
+}
+
+.menu-item:hover .g10-dropdown {
+    grid-template-rows: 1fr;
+}
+
+.dropdown-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+    margin: 0;
+    list-style-type: none;
+    height: auto;
+    width: max-content;
+}
+
+
+
+
+
+
+
+
+
+/* _____----- H E R O - S E C T I O N -----_____ */
+
+.hero {
+    padding: 3rem 2rem;
+}
+
+.hero-div {
+    display: flex;
+    gap: 3rem;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.hero-left,
+.hero-right {
+    width: calc((100% - 6rem) / 2);
+}
+
+.hero h1 {
+    font-family: mulish-bold;
+}
+
+h1 span {
+    color: var(--secondary);
+}
+
+.hero p {
+    font-family: mulish-regular;
+    margin: 1.8rem 0;
+}
+
+.hero button {
+    border: none;
+    outline: none;
+    background-color: var(--secondary);
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 0px;
+    padding: 0.6rem 1.5rem;
+    font-family: mulish-medium;
+}
+
+.hero-icons-list {
+    margin: 1rem 0 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.hero-icons-item {
+    width: 35px;
+}
+
+.bitcoin {
+    color: #ffa41c;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* _______------ S I G N U P - F O R M -------________ */
+
+
+.signup-header {
+    width: fit-content;
+    margin: 7rem auto 0rem;
+    color: var(--secondary);
+    font-family: 'mulish-extra-bold';
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 40rem;
+    margin: 3rem auto;
+}
+
+.form-input {
+    padding: 0.5rem 1rem;
+    font-family: mulish-regular;
+    font-size: 16px;
+    outline: none;
+}
+
+.form-button {
+    width: fit-content;
+    font-family: 'mulish-extra-bold';
+    background-color: var(--secondary);
+    outline: none;
+    border: none;
+    color: #fff;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 1rem;
+    transition: all 0.4s ease;
+}
+
+.form-button:hover {
+    background-color: #fff;
+    color: var(--secondary);
+    outline: 1px solid var(--secondary);
+}
+
+
+
+
+
+
+
+
+
+/* ______------ S I G N I N - F O R M ------______ */
+
+.signin {
+    color: #fff;
+    width: 1150px;
+    margin: 4rem auto 8rem;
+}
+
+.signin-header {
+    font-family: 'mulish-extra-bold';
+    font-size: 35px;
+    text-align: center;
+}
+
+.signin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.signin-form-field {
+    display: flex;
+    background-color: #fff;
+    color: var(--primary);
+    padding: 0.2rem 0.5rem;
+    width: 25rem;
+}
+
+.signin-form-field input {
+    border: none;
+    width: -webkit-fill-available;
+    font-size: 16px;
+    padding: 0.5rem;
+    font-family: mulish-light;
+    outline: none;
+}
+
+.signin-form-field label {
+    display: flex;
+    align-items: center;
+}
+
+.signin-form-field svg {
+    height: 20px;
+}
