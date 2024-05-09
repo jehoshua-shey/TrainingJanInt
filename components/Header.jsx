@@ -23,7 +23,7 @@ const Header = () => {
                     <a href="" className="menu-item"><li>About</li></a>
                     <a href="" className="menu-item"><li>Features</li></a>
                     <a href="/login" className="menu-item"><li>Log In</li></a>
-                    <a href="signup.html" className="menu-item"><li>Sign Up</li></a>
+                    <a href="/signup" className="menu-item"><li>Sign Up</li></a>
                 </ul>
             </nav>
         </React.Fragment>
