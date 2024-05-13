@@ -1,6 +1,8 @@
 'use client'
 
 import Header from '@/components/Header'
+import { signIn } from 'next-auth/react';
+import { useRouter } from 'next/navigation';
 import React, { useState } from 'react'
 
 const page = () => {
@@ -8,6 +10,8 @@ const page = () => {
     const [hide, setHide] = useState('hidden')
     const [inputType, setInputType] = useState("password")
     const [user, setUser] = useState({ email: '', password: '' })
+
+    const router = useRouter();
 
     // Vanilla was abandonned in favour of react
     const visibility = () => {
@@ -29,7 +33,6 @@ const page = () => {
 
     const submitForm = async (e) => {
         e.preventDefault()
-        setLoading(true)
 
         const { email, password } = user
 
@@ -48,7 +51,6 @@ const page = () => {
         }
         else {
             alert('Email or password incorrect')
-            setLoading(false)
         }
     }
 

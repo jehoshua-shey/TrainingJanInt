@@ -24,6 +24,10 @@ const UserSchema = new Schema(
             trim: true,
             max: 32,
         },
+        role: {
+            type: Number,
+            default: 0,
+        },
         photo: {
             data: Buffer,
             contentType: String
